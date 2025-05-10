@@ -1,0 +1,20 @@
+{
+  "estudiantes": [
+    {"id": 1, "nombre": "Ana Gomez", "correo": "ana@example.com"},
+    {"id": 2, "nombre": "Juan Perez", "correo": "juan@example.com"},
+    {"id": 3, "nombre": "Maria Lopez", "correo": "maria@example.com"}
+  ],
+  "cursos": [
+    {"id": 1, "nombre": "Matematicas"},
+    {"id": 2, "nombre": "Lengua"},
+    {"id": 3, "nombre": "Ciencias"}
+  ],
+  "notas": [
+    {"estudiante_id": 1, "curso_id": 1, "nota": 8},
+    {"estudiante_id": 1, "curso_id": 2, "nota": 7},
+    {"estudiante_id": 2, "curso_id": 2, "nota": 9},
+    {"estudiante_id": 2, "curso_id": 3, "nota": 6},
+    {"estudiante_id": 3, "curso_id": 1, "nota": 5},
+    {"estudiante_id": 3, "curso_id": 3, "nota": 8}
+  ]
+}
