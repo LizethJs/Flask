@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas de Estudiantes</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        form { margin-bottom: 20px; }
+        .resultados { margin-top: 20px; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Consultar Notas de un Estudiante</h1>
+    <form method="POST">
+        <input type="text" name="nombre" placeholder="Ej: Ana Gomez" required>
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if resultados %}
+        <div class="resultados">
+            <h2>Notas de {{ nombre }}</h2>
+            <table>
+                <tr><th>Curso</th><th>Nota</th></tr>
+                {% for r in resultados %}
+                    <tr><td>{{ r.curso }}</td><td>{{ r.nota }}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% elif mensaje %}
+        <p><strong>{{ mensaje }}</strong></p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Lista de Estudiantes</h2>
+    <table>
+        <tr><th>Nombre</th><th>Correo</th></tr>
+        {% for e in estudiantes %}
+            <tr><td>{{ e.nombre }}</td><td>{{ e.correo }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
